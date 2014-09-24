@@ -23,6 +23,7 @@ class equaliseColourRampOperator(bpy.types.Operator):
         return {'FINISHED'}
 
 
+
 def main(context):
     if context.active_node:  
         if context.active_node.type == "VALTORGB":                          
