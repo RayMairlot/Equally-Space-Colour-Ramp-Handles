@@ -1,27 +1,44 @@
-import bpy
+# ##### BEGIN GPL LICENSE BLOCK #####
+#
+#  This program is free software; you can redistribute it and/or
+#  modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation; either version 2
+#  of the License, or (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software Foundation,
+#  Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+#
+# ##### END GPL LICENSE BLOCK #####
 
 
 bl_info = {
-    "name": "Evenly Space ColourRamp node handles",
-    "description": "Evenly space colourramp node handles.",
+    "name": "Evenly Space ColourRamp Node Handles",
+    "description": "Evenly space ColourRamp node handles.",
     "author": "Ray Mairlot",
     "version": (1, 0),
     "blender": (2, 71, 0),
-    "location": "Node Editor > Q over selected colour ramp node",
+    "location": "Node Editor > Q over selected ColourRamp node",
     "category": "Node"}
     
+
+import bpy
     
 
 class equaliseColourRampOperator(bpy.types.Operator):
-    """ Evenly space colourramp handles for the selected colour ramp node """
+    """ Evenly space ColourRamp handles for the selected colour ramp node """
     bl_idname = "node.even_colour_ramp"
-    bl_label = "Evenly space colourramp node handles"
+    bl_label = "Evenly space ColourRamp node handles"
 
 
     def execute(self, context):
         main(context)
         return {'FINISHED'}
-
 
 
 def main(context):
